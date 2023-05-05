@@ -1,0 +1,15 @@
+.site {
+  padding-top: $content-top-padding;
+}
+
+body {
+  &.home {
+    .site {
+      padding-top: 2rem;
+    }
+  }
+}
+
+img {
+  box-shadow: 3px 3px 10px rgba(0,0,0,.18);
+}

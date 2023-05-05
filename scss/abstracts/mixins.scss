@@ -1,0 +1,24 @@
+@mixin border-radius() {
+    border-radius: 5px;
+}
+
+@mixin transition() {
+    transition: all .1s ease;
+}
+
+@mixin box-shadow() {
+    box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.66);
+}
+
+@mixin motorcycle-icon {
+    content: '\f21c';
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2rem;
+    color: $primary;
+}
