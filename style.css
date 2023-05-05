@@ -354,7 +354,7 @@ body.home .site {
   padding-top: 2rem;
 }
 
-img {
+.site-content img {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.18);
 }
 
