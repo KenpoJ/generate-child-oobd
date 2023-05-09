@@ -2,7 +2,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 17px;
   line-height: 1.3rem;
-  color: $light;
+  color: $dark;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
   line-height: 1em;
-  color: $light;
+  color: $secondary;
   // text-shadow: 1px 1px $secondary;
 }
 h1 {
@@ -18,9 +18,14 @@ h1 {
   font-size: 2.5rem;
   color: $primary-contrast;
   text-shadow: none;
+  text-transform: uppercase;
 }
 h2 {
   font-size: 2.2rem;
+
+  &:not(.woocommerce-loop-category__title) {
+    text-transform: uppercase;
+  }
 }
 h3 {
   font-size: 2rem;

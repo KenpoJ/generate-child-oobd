@@ -15,6 +15,7 @@ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 @import "scss/abstracts/animations";
 @import "scss/abstracts/typography";
 @import "scss/layout/base";
+@import "scss/layout/buttons";
 // @import "scss/layout/layout-blog";
 // @import "scss/layout/forms";
 @import "scss/layout/header";
@@ -23,6 +24,6 @@ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 // @import "scss/layout/single";
 // @import "scss/layout/sidebar";
 // @import "scss/layout/home";
-// @import "scss/woocommerce/base";
+@import "scss/woocommerce/base";
 // @import "scss/woocommerce/form";
 // @import "scss/woocommerce/single-product";
