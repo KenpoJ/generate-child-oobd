@@ -1,0 +1,11 @@
+a {
+  &.button {
+    @include border-radius();
+  }
+  &.btn-primary {
+    background: $primary;
+  }
+  &.btn-secondary {
+    background: $secondary;
+  }
+}

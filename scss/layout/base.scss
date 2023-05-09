@@ -13,5 +13,27 @@ body {
 .site-content {
   img {
     box-shadow: 3px 3px 10px rgba(0,0,0,.18);
+    @include border-radius();
+  }
+}
+
+article {
+  margin-bottom: 2rem;
+
+  img {
+    margin-bottom: 1rem;
+  }
+  .article-meta {
+    margin-bottom: 1.5rem;
+    padding: .25rem;
+    padding-left: .75rem;
+    background: $light;
+    background: linear-gradient(90deg, $light 70%, $bg-light 100%);
+    @include border-radius();
+
+    p {
+      margin-bottom: 0;
+      font-style: italic;
+    }
   }
 }

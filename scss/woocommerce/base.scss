@@ -1,0 +1,26 @@
+.woocommerce-loop-category__title {
+    .count {
+        display: none;
+    }
+}
+
+.woocommerce {
+    &.columns-2 {
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid $dark;
+    }
+    ul {
+        &.products {
+            li {
+                &.product {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+    .woocommerce-loop-product__link {
+        .woocommerce-loop-product__title {
+            text-transform: none;
+        }
+    }
+}
