@@ -1,0 +1,43 @@
+.inside-sidebar-ride {
+    .sidebar-heading {
+        font-size: 1.5rem;
+        color: $primary;
+    }
+    .rating-title {
+        font-size: 1.2rem;
+        font-style: italic;
+    }
+    .rating-level {
+        font-size: 1rem;
+        color: $primary;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 1rem;
+    }
+}
+
+.widget-area {
+    .widget {
+        padding: 1rem 1rem 1.75rem 1rem;
+    }
+    .sidebar-img {
+        width: 100px;
+    }
+}
+.sidebar-social {
+    display: flex;
+    justify-content: space-around;
+}
+.wp-block-latest-comments__comment-excerpt {
+    p {
+        line-height: inherit;
+    }
+}
+
+.featherlight {
+    .featherlight-image {
+        background: white;
+    }
+}

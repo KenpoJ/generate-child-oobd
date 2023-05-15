@@ -1,0 +1,67 @@
+.grid-cointainer {
+  .site-content {
+    main {
+      display: grid !important;
+      grid-template-columns: 66% 33%;
+    }
+  }
+
+  article {
+    &.post {
+
+    }
+  }
+}
+
+.blog-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  article {
+    &.post {
+      padding: 1rem 1rem 1.5rem 1rem;
+      flex: 0 1 48%;
+      @include border-radius;
+
+      &.category-rides {
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+          @include motorcycle-icon;
+        }
+      }
+
+      .entry-title {
+        margin-bottom: 0;
+        margin-right: 3.3rem;
+        font-size: 1.3rem;
+      }
+      .entry-meta {
+        margin: 0 0 .6rem 0;
+      }
+
+      @media screen and (max-width: 600px) {
+        flex: 0 1 100%;
+      }
+    }
+  }
+}
+
+.inside-article {
+  @include border-radius();
+}
+
+.category-rides {
+  .featured-image {
+    display: none;
+  }
+}
+
+.site-main {
+  .post-navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+}
