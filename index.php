@@ -1,36 +1,82 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The main template file.
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package GeneratePress
+ */
 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly.
+}
 
-<div class="container page-container">
+get_header(); ?>
 
-  <main id="content" role="main">
+    <div <?php generate_do_attr( 'content' ); ?>>
+        <main <?php generate_do_attr( 'main' ); ?>>
+            <?php
+            /**
+             * generate_before_main_content hook.
+             *
+             * @since 0.1
+             */
+            do_action( 'generate_before_main_content' );
 
-    <?php if(is_home()) { ?>
+            if ( generate_has_default_loop() ) {
+                if ( have_posts() ) :
 
-      <div class="blog-page">
+                    /**
+                     * generate_before_loop hook.
+                     *
+                     * @since 3.1.0
+                     */
+                    do_action( 'generate_before_loop', 'index' );
 
-    <?php } ?>
+                    while ( have_posts() ) :
 
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                        the_post();
 
-      <?php get_template_part( 'page-templates/entry' ); ?>
+                        generate_do_template_part( 'index' );
 
-      <?php comments_template(); ?>
+                    endwhile;
 
-    <?php endwhile; endif; ?>
+                    /**
+                     * generate_after_loop hook.
+                     *
+                     * @since 2.3
+                     */
+                    do_action( 'generate_after_loop', 'index' );
 
-    <?php if(is_home()) { ?>
+                else :
 
-      </div>
+                    generate_do_template_part( 'none' );
 
-    <?php } ?>
+                endif;
+            }
 
-    <?php get_template_part( 'nav', 'below' ); ?>
+            /**
+             * generate_after_main_content hook.
+             *
+             * @since 0.1
+             */
+            do_action( 'generate_after_main_content' );
+            ?>
+        </main>
+    </div>
 
-  </main>
+    <?php
+    /**
+     * generate_after_primary_content_area hook.
+     *
+     * @since 2.0
+     */
+    do_action( 'generate_after_primary_content_area' );
 
-  <?php get_sidebar(); ?>
+    generate_construct_sidebars();
 
-</div>
-
-<?php get_footer(); ?>
+    get_footer();

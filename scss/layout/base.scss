@@ -11,9 +11,29 @@ body {
 }
 
 .site-content {
-  img {
+  img,
+  .wp-block-embed {
     box-shadow: 3px 3px 10px rgba(0,0,0,.18);
     @include border-radius();
+  }
+}
+
+.entry-content {
+  figure {
+    margin-bottom: 2rem;
+  }
+  .mashsb-container {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid $secondary;
+  }
+}
+
+.wp-block-image {
+  &.no-shadow {
+    img {
+      box-shadow: none;
+    }
   }
 }
 
@@ -35,5 +55,11 @@ article {
       margin-bottom: 0;
       font-style: italic;
     }
+  }
+}
+
+img {
+  &.rounded-circle {
+    border-radius: 50%;
   }
 }

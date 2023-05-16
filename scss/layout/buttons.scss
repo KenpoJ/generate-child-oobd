@@ -9,3 +9,8 @@ a {
     background: $secondary;
   }
 }
+
+.wp-block-search__button {
+  background: $primary;
+  @include border-radius();
+}

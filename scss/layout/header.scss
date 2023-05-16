@@ -44,3 +44,16 @@
     background: $primary;
   }
 }
+
+.entry-content {
+  .hero {
+    margin-bottom: 2rem;
+    padding: 50px 80px;
+    background-color: $primary;
+    @include border-radius();
+
+    .hero-title-container {
+      max-width: 75%;
+    }
+  }
+}
