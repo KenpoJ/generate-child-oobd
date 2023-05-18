@@ -19,6 +19,7 @@ get_header(); ?>
 
     <div <?php generate_do_attr( 'content' ); ?>>
         <main <?php generate_do_attr( 'main' ); ?>>
+            
             <?php
             /**
              * generate_before_main_content hook.
@@ -28,8 +29,10 @@ get_header(); ?>
             do_action( 'generate_before_main_content' );
 
             if ( generate_has_default_loop() ) {
-                if ( have_posts() ) :
+                if ( have_posts() ) : ?>
+                    <div class="flex blog-page">
 
+                    <?php
                     /**
                      * generate_before_loop hook.
                      *
@@ -37,14 +40,17 @@ get_header(); ?>
                      */
                     do_action( 'generate_before_loop', 'index' );
 
-                    while ( have_posts() ) :
+                    while ( have_posts() ) : ?>
 
-                        the_post();
+                        <?php the_post();
 
-                        generate_do_template_part( 'index' );
+                        generate_do_template_part( 'index' ); ?>
 
-                    endwhile;
+                    <?php endwhile; ?>
 
+                    </div>
+
+                    <?php
                     /**
                      * generate_after_loop hook.
                      *
@@ -66,6 +72,7 @@ get_header(); ?>
              */
             do_action( 'generate_after_main_content' );
             ?>
+            </div>
         </main>
     </div>
 

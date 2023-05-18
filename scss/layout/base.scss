@@ -2,6 +2,13 @@
   padding-top: $content-top-padding;
 }
 
+.grid {
+  display: grid;
+}
+.flex {
+  display: flex;
+}
+
 body {
   &.home {
     .site {
