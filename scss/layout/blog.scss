@@ -13,16 +13,22 @@
   }
 }
 
-.blog-page {
+.blog-page,
+.archive-page {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
   article {
+    .inside-article {
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+    }
     &.post {
-      padding: 1rem 1rem 1.5rem 1rem;
+      // padding: 1rem 1rem 1.5rem 1rem;
       flex: 0 1 48%;
       @include border-radius;
+      background: lighten($light, 50%);
 
       &.category-rides {
         position: relative;
@@ -37,6 +43,10 @@
         margin-bottom: 0;
         margin-right: 3.3rem;
         font-size: 1.3rem;
+      }
+      .entry-summary {
+        margin-top: 0;
+        margin-bottom: 1.2rem;
       }
       .entry-meta {
         margin: 0 0 .6rem 0;
