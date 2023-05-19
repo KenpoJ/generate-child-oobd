@@ -24,7 +24,6 @@ if ( ! function_exists( 'generate_widgets_init' ) ) {
     $widgets = array(
       'sidebar-default' => __( 'Sidebar Default', 'generatepress' ),
       'sidebar-ride' => __( 'Sidebar Ride', 'generatepress' ),
-      'sidebar-popular-posts' => __( 'Sidebar Popular Posts', 'generatepress' ),
       'header' => __( 'Header', 'generatepress' ),
       'footer-1' => __( 'Footer Widget 1', 'generatepress' ),
       'footer-2' => __( 'Footer Widget 2', 'generatepress' ),

@@ -24,6 +24,14 @@ if ( ! defined( 'ABSPATH' ) ) {
       <h3 class="sidebar-heading">Ride Ratings</h3>
       <div class="grid">
         <div class="rating-container">
+          <h4 class="rating-title">Overall</h4>
+          <div class="rating-level">
+            <? $overall = get_field('rating-overall'); ?>
+            <? //echo $overall; ?>
+            <? echo get_star_rating($overall); ?>
+          </div>
+        </div>
+        <div class="rating-container">
           <h4 class="rating-title">Enjoyment</h4>
           <div class="rating-level">
             <? $enjoyment = get_field('rating-enjoyment'); ?>
@@ -45,14 +53,6 @@ if ( ! defined( 'ABSPATH' ) ) {
             <? $tourism = get_field('rating-tourism'); ?>
             <? //echo $tourism; ?>
             <? echo get_star_rating($tourism); ?>
-          </div>
-        </div>
-        <div class="rating-container">
-          <h4 class="rating-title">Overall</h4>
-          <div class="rating-level">
-            <? $overall = get_field('rating-overall'); ?>
-            <? //echo $overall; ?>
-            <? echo get_star_rating($overall); ?>
           </div>
         </div>
       </div>
@@ -85,16 +85,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <?php } ?>
 
-    <?php 
-    if(is_active_sidebar('sidebar-popular-posts')) { ?>
-
       <div class="widget inner-padding widget_block popular-posts">
         <h3 class="sidebar-heading">Popular Posts</h3>
-        <?php dynamic_sidebar('popular-posts'); ?>
+        <?php echo do_shortcode('[wpp limit="5" range="all" stats_views=1 order_by="views" thumbnail_width=120]') ?>
       </div>
 
     <?php
-    }
 
     /*if ( ! dynamic_sidebar( 'sidebar-default' ) ) {
       generate_do_default_sidebar_widgets( 'right-sidebar' );
