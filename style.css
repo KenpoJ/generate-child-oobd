@@ -586,6 +586,10 @@ a.btn-secondary {
   line-height: inherit;
 }
 
+.popular-posts .wpp-list li {
+  margin-bottom: 1.4rem;
+}
+
 .featherlight .featherlight-image {
   background: white;
 }
