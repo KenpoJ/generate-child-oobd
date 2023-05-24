@@ -74,4 +74,16 @@
     display: flex;
     justify-content: space-between;
   }
+  header {
+    &.page-header {
+      padding-bottom: .5rem;
+      padding-left: 30px;
+      background: transparent;
+      border-bottom: 1px solid $primary;
+
+      .page-title {
+        font-size: 1.75rem;
+      }
+    }
+  }
 }

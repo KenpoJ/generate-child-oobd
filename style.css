@@ -496,6 +496,15 @@ a.btn-secondary {
   display: flex;
   justify-content: space-between;
 }
+.site-main header.page-header {
+  padding-bottom: 0.5rem;
+  padding-left: 30px;
+  background: transparent;
+  border-bottom: 1px solid #a52226;
+}
+.site-main header.page-header .page-title {
+  font-size: 1.75rem;
+}
 
 .site-header {
   width: 100%;
