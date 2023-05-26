@@ -4,23 +4,90 @@
     }
 }
 
-.woocommerce {
-    &.columns-2 {
-        margin-bottom: 1.5rem;
-        border-bottom: 1px solid $dark;
-    }
-    ul {
-        &.products {
-            li {
-                &.product {
-                    margin-bottom: 1rem;
+.alert {
+    padding: .7rem 0;
+    font-weight: bold;
+    color: $light;
+    background: $secondary;
+    background: linear-gradient(135deg, $secondary 75%, $primary 75%);
+    @include border-radius();
+}
+
+.featured-products,
+.best-sellers {
+    .woocommerce {
+        ul {
+            &.products {
+                display: flex;
+
+                li {
+                    &.product {
+                        flex: 0 1 50%;
+                        display: flex;
+                        flex-direction: column;
+
+                        .button {
+                            margin-top: auto;
+                        }
+                    }
                 }
             }
         }
     }
-    .woocommerce-loop-product__link {
-        .woocommerce-loop-product__title {
-            text-transform: none;
+}
+
+.shop-topper {
+    // padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    // background: lighten($light, 50%);
+
+    .img-container {
+        @include border-radius();
+        background: url('/wp-content/uploads/2020/10/IMG_0857-scaled-e1608439574183.jpeg') no-repeat center center;
+    }
+}
+
+.featured-shop-heading {
+    color: $primary;
+}
+.content-shopping {
+    width: 100%;
+}
+.shopping-content {
+    grid-template-columns: 75% 25%;
+    grid-gap: 1.5rem;
+}
+.sidebar-shopping {
+    width: 100%;
+
+    .featured-products {
+        .woocommerce {
+            ul {
+                &.products {
+                    flex-wrap: wrap;
+
+                    li {
+                        &.product {
+                            flex: 0 1 47%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.woocommerce {
+    .button {
+        color: white !important;
+        background: $primary !important;
+    }
+    div {
+        &.product {
+            .entry-title {
+                padding-bottom: 1rem;
+            }
         }
     }
 }
