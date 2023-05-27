@@ -101,8 +101,8 @@ if ( ! defined( 'ABSPATH' ) ) {
   if(is_front_page()) {
       echo do_shortcode('[add_hero 
         id="hero-home" 
-        title="Help support the Muscular Dystrophy Association" 
-        subtitle="This is a subtitle" 
+        title="Rev Up for a Cause:" 
+        subtitle="Lend a Hand to Support the MDA by Making a Purchase That Saves Lives!" 
         cta="Shop Now" 
         background-color="#bbc1d2"
         link="/shop" 

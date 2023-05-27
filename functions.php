@@ -50,6 +50,19 @@ if ( ! function_exists( 'generate_widgets_init' ) ) {
   }
 }
 
+function register_new_menus() {
+  register_nav_menu('footer-menu',__( 'Footer Menu' ));
+}
+add_action( 'init', 'register_new_menus' );
+
+function tu_custom_copyright() {
+    ?>
+    Copyright One Old Biker Dude 2020 - <?php echo date("Y"); ?> | Powered by <a href="https://wordpress.com" target="_blank">Wordpress</a>
+    <?php
+}
+add_filter( 'generate_copyright','tu_custom_copyright' );
+
+
 if ( ! function_exists( 'generate_construct_sidebars' ) ) {
   /**
    * Construct the sidebars.
