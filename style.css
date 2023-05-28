@@ -621,6 +621,40 @@ a.btn-secondary {
   background: white;
 }
 
+.affiliate-link-container {
+  margin: 1.2rem auto;
+  width: 80%;
+  border: 1px solid #3e3e3d;
+  border-radius: 5px;
+}
+.affiliate-link-container .img-container {
+  height: 100%;
+  max-width: 20%;
+  align-self: center;
+}
+.affiliate-link-container .img-container .product-img {
+  margin-bottom: 0;
+}
+.affiliate-link-container .product-info {
+  padding: 1.2rem;
+}
+.affiliate-link-container .product-info .product-title {
+  text-transform: title;
+}
+.affiliate-link-container .meta-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.affiliate-link-container .meta-cta .affiliate-company {
+  font-style: italic;
+  font-weight: bold;
+}
+.affiliate-link-container .meta-cta .affiliate-company small {
+  font-style: normal;
+  font-weight: normal;
+}
+
 .woocommerce-loop-category__title .count {
   display: none;
 }

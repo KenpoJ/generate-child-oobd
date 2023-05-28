@@ -1,0 +1,38 @@
+.affiliate-link-container {
+    margin: 1.2rem auto;
+    width: 80%;
+    border: 1px solid $dark;
+    @include border-radius();
+
+    .img-container {
+        height: 100%;
+        max-width: 20%;
+        align-self: center;
+
+        .product-img {
+            margin-bottom: 0;
+        }
+    }
+    .product-info {
+        padding: 1.2rem;
+
+        .product-title {
+            text-transform: title;
+        }
+    }
+    .meta-cta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .affiliate-company {
+            font-style: italic;
+            font-weight: bold;
+
+            small {
+                font-style: normal;
+                font-weight: normal;
+            }
+        }
+    }
+}
