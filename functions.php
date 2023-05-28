@@ -1,19 +1,19 @@
 <?php
-/*add_action( 'wp_enqueue_scripts', 'oobd_generate_child_enqueue_styles' );
-function oobd_generate_child_enqueue_styles() {
+/*function generatepress_oobd_child_theme() {
   $parenthandle = 'generate-style'; // This is 'twentyfifteen-style' for the Twenty Fifteen theme.
   $theme        = wp_get_theme();
   wp_enqueue_style( $parenthandle,
     get_template_directory_uri() . '/style.css',
     array(),  // If the parent theme code has a dependency, copy it to here.
-    // $theme->parent()->get( 'Version' )
+    $theme->parent()->get( 'Version' )
   );
   wp_enqueue_style( 'child-style',
     get_stylesheet_uri(),
-    array( $parenthandle ),
+    array( 'generate-style' )
     // $theme->get( 'Version' ) // This only works if you have Version defined in the style header.
   );
-}*/
+}
+add_action( 'wp_enqueue_scripts', 'generatepress_oobd_child_theme' );*/
 
 if ( ! function_exists( 'generate_widgets_init' ) ) {
   add_action( 'widgets_init', 'generate_widgets_init' );
@@ -55,12 +55,12 @@ function register_new_menus() {
 }
 add_action( 'init', 'register_new_menus' );
 
-function tu_custom_copyright() {
+function do_custom_copyright() {
     ?>
     Copyright One Old Biker Dude 2020 - <?php echo date("Y"); ?> | Powered by <a href="https://wordpress.com" target="_blank">Wordpress</a>
     <?php
 }
-add_filter( 'generate_copyright','tu_custom_copyright' );
+add_filter( 'generate_copyright','do_custom_copyright' );
 
 
 if ( ! function_exists( 'generate_construct_sidebars' ) ) {
