@@ -1,0 +1,53 @@
+input {
+  &.form-control {
+    padding: .2rem;
+    height: 1rem;
+  }
+}
+
+.search-form,
+.comment-form  {
+  input {
+    padding: .5rem;
+    width: 100%;
+    border: 1px solid lighten($light, 10%);;
+    @include border-radius();
+  }
+}
+
+.wsf-form,
+.edit-account{
+  input:not([type=checkbox]),
+  textarea {
+    padding: .2rem;
+    height: 2rem;
+    width: 100%;
+    background: lighten($light, 20%);
+    border: 1px solid lighten($light, 10%);
+    @include border-radius();
+
+    &:focus {
+      box-shadow: 0 0 10px lighten($secondary, 40%);
+      border-bottom: none;
+    }
+  }
+  input[type=checkbox] {
+    margin-right: 1rem;
+  }
+  textarea {
+    height: 7rem;
+  }
+  .form-group {
+    margin: .3rem 0 1rem;
+  }
+  .invalid-feedback {
+    display: none;
+    color: $primary;
+  }
+}
+
+.secondary-column {
+  input {
+    border: 1px solid $dark;
+  }
+}

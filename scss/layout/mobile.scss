@@ -1,0 +1,87 @@
+@media screen and (max-width: 500px) {
+
+  .hero {
+    padding: 130px 2rem 2rem 2rem;
+
+    .hero-title-container {
+      max-width: 100%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .main-navigation {
+    &.toggled {
+      @include border-radius();
+      @include box-shadow();
+
+      .main-nav {
+        li {
+          background: lighten($light, 15%);
+          @include transition();
+
+          &:hover {
+            background: lighten($light, 12%);
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+
+  .woocommerce {
+    .featured-products,
+    .best-sellers {
+      .woocommerce {
+        ul {
+          &.products {
+            display: flex !important;
+
+            li {
+              &.product {
+                width: auto;
+                float: auto;
+                flex: 0 1 50%;
+                display: flex;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .woocommerce,
+  .woocommerce-page,
+  .woocommerce-page[class*=columns-],
+  .woocommerce[class*=columns-]  {
+    ul {
+      .products {
+        li {
+          .product {
+            width: 0;
+            float: left;
+            flex: 0 1 50%;
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .site {
+    padding-top: 100px;
+    max-width: 90%;
+  }
+
+}

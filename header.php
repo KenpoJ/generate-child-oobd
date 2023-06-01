@@ -106,7 +106,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         cta="Shop Now" 
         background-color="#bbc1d2"
         link="/shop" 
-        background-image="/wp-content/uploads/2020/10/IMG_0373-e1608439497487.png"]');
+        background-image="/wp-content/uploads/2020/10/IMG_0035-scaled-e1608439545921.jpeg"]');
   }
   ?>
 

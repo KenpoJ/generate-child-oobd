@@ -13,6 +13,29 @@
 
 .main-navigation {
   background: transparent;
+
+  .main-nav {
+    @include border-radius();
+    box-shadow: 3px 3px 9px 0px rgba(0,0,0,0.1);
+
+    ul {
+      li {
+        &:first-child{
+          a {
+            border-radius: 4px 0 0 4px;
+          }
+        }
+        &:last-child{
+          a {
+            border-radius: 0 4px 4px 0;
+          }
+        }
+        a {
+          background: rgba(255,255,255,.6);
+        }
+      }
+    }
+  }
 }
 
 .hero {
