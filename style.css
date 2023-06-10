@@ -695,11 +695,11 @@ input.form-control {
   border-radius: 5px;
 }
 .affiliate-link-container .img-container {
-  height: 100%;
-  max-width: 20%;
+  margin-left: 1.2rem;
   align-self: center;
+  flex: 0 1 30%;
 }
-.affiliate-link-container .img-container .product-img {
+.affiliate-link-container .img-container .affiliate-img {
   margin-bottom: 0;
 }
 .affiliate-link-container .product-info {
@@ -720,6 +720,9 @@ input.form-control {
 .affiliate-link-container .meta-cta .affiliate-company small {
   font-style: normal;
   font-weight: normal;
+}
+.affiliate-link-container .meta-cta .affiliate-button {
+  text-align: center;
 }
 
 @media screen and (max-width: 500px) {
