@@ -5,11 +5,11 @@
     @include border-radius();
 
     .img-container {
-        height: 100%;
-        max-width: 20%;
+        margin-left: 1.2rem;
         align-self: center;
+        flex: 0 1 30%;
 
-        .product-img {
+        .affiliate-img {
             margin-bottom: 0;
         }
     }
@@ -33,6 +33,9 @@
                 font-style: normal;
                 font-weight: normal;
             }
+        }
+        .affiliate-button {
+            text-align: center;
         }
     }
 }
