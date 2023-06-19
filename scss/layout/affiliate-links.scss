@@ -1,6 +1,6 @@
 .affiliate-link-container {
     margin: 1.2rem auto;
-    width: 80%;
+    width: 95%;
     border: 1px solid $dark;
     @include border-radius();
 
@@ -15,15 +15,18 @@
     }
     .product-info {
         padding: 1.2rem;
+        flex-grow: 1;
 
         .product-title {
             text-transform: title;
         }
     }
     .meta-cta {
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
 
         .affiliate-company {
             font-style: italic;
@@ -36,6 +39,7 @@
         }
         .affiliate-button {
             text-align: center;
+            max-width: 50%;
         }
     }
 }
