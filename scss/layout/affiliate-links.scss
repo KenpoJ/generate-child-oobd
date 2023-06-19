@@ -1,13 +1,15 @@
-.affiliate-link-container {
-    margin: 1.2rem auto;
-    width: 95%;
+.eafl-link {
+  margin: 1.2rem auto 2rem auto;
+  width: 95%;
+
+ .affiliate-link-container {
     border: 1px solid $dark;
     @include border-radius();
 
     .img-container {
         margin-left: 1.2rem;
         align-self: center;
-        flex: 0 1 30%;
+        flex: 0 1 25%;
 
         .affiliate-img {
             margin-bottom: 0;
@@ -42,4 +44,6 @@
             max-width: 50%;
         }
     }
+} 
 }
+
